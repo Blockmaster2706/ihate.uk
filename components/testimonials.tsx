@@ -55,7 +55,7 @@ export default function Testimonials() {
               <blockquote className="text-lg text-gray-400 grow">— Excuse me, Are you British?? … Oh no.. Oh no no no no no Hatsune Miku does NOT talk to British People! the only £s I need are me £ing your mum <br></br>SEKA-</blockquote>
               <div className="text-gray-700 font-medium mt-6 pt-5 border-t border-gray-700">
                 <cite className="text-gray-200 not-italic">Hatsune Miku</cite> - <button className="text-teal-300 hover:text-gray-200 transition duration-150 ease-in-out" onClick={() => {
-                  const audio = document.getElementById("hatsune");
+                  const audio = document.getElementById("hatsune") as HTMLAudioElement;
                   if (audio) {
                     audio.play();
                   }
