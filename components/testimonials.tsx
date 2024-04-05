@@ -74,7 +74,7 @@ export default function Testimonials() {
                   </svg>
                 </div>
               </div>
-              <blockquote className="text-lg text-gray-400 grow">— I think the women belong to the man. Also, escape the matrix, homie.</blockquote>
+              <blockquote className="text-lg text-gray-400 grow">— I think the women belong to the man. Also, escape the matrix, homie. Get yourself some bitches, brah. Make passive income, oomfie.</blockquote>
               <div className="text-gray-700 font-medium mt-6 pt-5 border-t border-gray-700">
                 <cite className="text-gray-200 not-italic">Andrew Tate</cite> - <a className="text-teal-300 hover:text-gray-200 transition duration-150 ease-in-out" href="#0">Certified Baddie</a>
               </div>
