@@ -1,5 +1,14 @@
+'use client'
+
 import Link from 'next/link'
 import MobileMenu from './mobile-menu'
+
+import Image from 'next/image'
+
+import rockCat from '@/public/images/therockcat.jpg'
+import evilCat from '@/public/images/evilcat.jpg'
+import unimpressedCat from '@/public/images/unimpressedcat.jpg'
+import { TIMEOUT } from 'dns'
 
 export default function Header() {
   return (
@@ -29,14 +38,66 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Link href="/" className="btn-sm text-white bg-teal-300 hover:bg-gray-500 hover:text-teal-300 ml-3">
+                <button onClick={() => {
+                  const rockCat = document.getElementById('rockCat') as HTMLDivElement;
+                  console.log("Looking for rockCat")
+                  if (rockCat) {
+                    console.log("Found rockCat")
+                    rockCat.classList.add('visible');
+
+                    setTimeout(() => {
+                      rockCat.classList.remove('visible');
+
+                      const unimpressedCat = document.getElementById('unimpressedCat') as HTMLDivElement;
+                      console.log("Looking for unimpressedCat")
+                      if (unimpressedCat) {
+                        console.log("Found unimpressedCat")
+                        unimpressedCat.classList.add('visible');
+
+                        setTimeout(() => {
+                          unimpressedCat.classList.remove('visible');
+
+                          const evilCat = document.getElementById('evilCat') as HTMLDivElement;
+                          console.log("Looking for evilCat")
+                          if (evilCat) {
+                            console.log("Found evilCat")
+                            evilCat.classList.add('visible');
+
+                            setTimeout(() => {
+                              evilCat.classList.remove('visible');
+                            }, 3000);
+                          }
+                        }, 3000);
+                      }
+                    }, 3000);
+                  }
+                }} className="btn-sm text-white bg-teal-300 hover:bg-gray-500 hover:text-teal-300 ml-3">
                   Shut Up
-                </Link>
+                </button>
               </li>
             </ul>
           </nav>
 
           <MobileMenu />
+
+          <div className="fixed top-40 bottom-40 left-40 right-40 flex justify-center items-center z-50">
+            <div className='funny-cat' id="rockCat">
+              <label className="z-60 text-9xl top-20 bottom-40 left-40 right-40 fixed justify-top text-center items-center">Shut up?</label>
+              <Image className='z-55' src={rockCat} alt='Funny Cat looking with raised Eyebrow' />
+            </div>
+          </div>
+          <div className="fixed top-40 bottom-40 left-40 right-40 flex justify-center items-center z-50">
+            <div className='funny-cat' id="evilCat">
+              <label className="z-60 text-6xl top-20 bottom-40 left-40 right-40 fixed justify-top text-center items-center">How about you shut up instead?</label>
+              <Image className='z-56' src={evilCat} alt='Funny Cat looking with smug and evil expression' width={753} height={753} />
+            </div>
+          </div>
+          <div className="fixed top-40 bottom-40 left-40 right-40 flex justify-center items-center z-50">
+            <div className='funny-cat' id="unimpressedCat">
+              <label className="z-60 text-6xl top-20 bottom-40 left-40 right-40 fixed justify-top text-center items-center">Well that's not very nice.</label>
+              <Image className='z-57' src={unimpressedCat} alt='Funny Cat looking with unimpressed expression' width={753} height={753} />
+            </div>
+          </div>
 
         </div>
       </div>
