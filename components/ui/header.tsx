@@ -10,6 +10,15 @@ import evilCat from '@/public/images/evilcat.jpg'
 import unimpressedCat from '@/public/images/unimpressedcat.jpg'
 
 export default function Header() {
+
+  const getIp = async () => {
+    // Connect ipapi.co with fetch()
+    const response = await fetch("https://api.ipify.org?format=json")
+    const data = await response.json()
+    // Set the IP address to the constant `ip`
+    return(data.ip)
+  }
+
   return (
     <header className="absolute w-full">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -62,8 +71,10 @@ export default function Header() {
                             console.log("Found evilCat")
                             evilCat.classList.add('visible');
 
-                            setTimeout(() => {
+                            setTimeout(async () => {
                               evilCat.classList.remove('visible');
+                              const ip = await getIp();
+                              console.log(ip);
                             }, 3000);
                           }
                         }, 3000);
