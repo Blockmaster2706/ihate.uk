@@ -11,7 +11,7 @@ export default function Hero() {
 
   return (
     <section>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-70">
 
         {/* Illustration behind hero content */}
         <div className="absolute left-0 bottom-0 -ml-20 hidden lg:block pointer-events-none" aria-hidden="true" data-aos="fade-up" data-aos-delay="400">
@@ -44,7 +44,7 @@ export default function Hero() {
           </div>
 
           {/* Hero image */}
-          <div>
+          <div className='relative z-70'>
             <div className="relative flex justify-center items-center" data-aos="fade-up" data-aos-delay="200">
               <Image
                 src={HeroImage}
@@ -68,8 +68,8 @@ export default function Hero() {
             
             {/* Modal */}
             <Modal id="modal" ariaLabel="modal-headline" show={videoModalOpen} handleClose={() => setVideoModalOpen(false)}>
-              <div className="relative pb-9/16">
-                <video className="absolute w-full h-full" width="1920" height="1080" loop controls>
+              <div className="z-80 relative pb-9/16">
+                <video className="z-80 absolute w-full h-full" width="1920" height="1080" loop controls>
                   <source src="/videos/video.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video> 

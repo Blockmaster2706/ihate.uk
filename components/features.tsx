@@ -1,7 +1,7 @@
 export default function Features() {
   return (
     <section>
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 z-50">
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 z-20">
         <div className="py-12 md:py-20">
 
           {/* Section header */}
