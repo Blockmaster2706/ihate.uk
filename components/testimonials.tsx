@@ -14,11 +14,11 @@ export default function Testimonials() {
 
   return (
     <section>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="py-12 md:py-20 border-t border-gray-800">
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 z-30">
+        <div className="py-12 md:py-20 border-t border-gray-800 z-30">
 
           {/* Section header */}
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+          <div className="relative max-w-3xl mx-auto text-center pb-12 md:pb-20 z-30">
             <h2 className="h2 mb-4">Don't take our word for it</h2>
             <p className="text-xl text-gray-400">Instead, you should put your trust into these completely unbiased commentaries that we have collected from people.</p>
           </div>

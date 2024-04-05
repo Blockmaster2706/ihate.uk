@@ -8,15 +8,14 @@ import Image from 'next/image'
 import rockCat from '@/public/images/therockcat.jpg'
 import evilCat from '@/public/images/evilcat.jpg'
 import unimpressedCat from '@/public/images/unimpressedcat.jpg'
-import { TIMEOUT } from 'dns'
 
 export default function Header() {
   return (
-    <header className="absolute w-full z-30">
+    <header className="absolute w-full">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-20 z-30">
           {/* Site branding */}
-          <div className="shrink-0 mr-4">
+          <div className="shrink-0 mr-4 z-50">
             {/* Logo */}
             <Link href="/" className="block" aria-label="Cruip">
               <svg className="w-8 h-8 fill-current text-teal-300" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
@@ -26,7 +25,7 @@ export default function Header() {
           </div>
 
           {/* Desktop navigation */}
-          <nav className="hidden md:flex md:grow">
+          <nav className="hidden md:flex md:grow z-50">
             {/* Desktop sign in links */}
             <ul className="flex grow justify-end flex-wrap items-center">
               <li>
@@ -80,23 +79,17 @@ export default function Header() {
 
           <MobileMenu />
 
-          <div className="fixed top-40 bottom-40 left-40 right-40 flex justify-center items-center z-50">
-            <div className='funny-cat' id="rockCat">
-              <label className="z-60 text-9xl top-20 bottom-40 left-40 right-40 fixed justify-top text-center items-center">Shut up?</label>
-              <Image className='z-55' src={rockCat} alt='Funny Cat looking with raised Eyebrow' />
-            </div>
+          <div className="funny-cat fixed top-40 bottom-40 left-40 right-40 flex justify-center items-center" id="rockCat">
+              <label className="text-9xl top-20 bottom-40 left-40 right-40 fixed justify-top text-center items-center">Shut up?</label>
+              <Image className='' src={rockCat} alt='Funny Cat looking with raised Eyebrow' />
           </div>
-          <div className="fixed top-40 bottom-40 left-40 right-40 flex justify-center items-center z-50">
-            <div className='funny-cat' id="evilCat">
-              <label className="z-60 text-6xl top-20 bottom-40 left-40 right-40 fixed justify-top text-center items-center">How about you shut up instead?</label>
-              <Image className='z-56' src={evilCat} alt='Funny Cat looking with smug and evil expression' width={753} height={753} />
-            </div>
+          <div className="funny-cat fixed top-40 bottom-40 left-40 right-40 flex justify-center items-center" id="evilCat">
+              <label className="text-6xl top-20 bottom-40 left-40 right-40 fixed justify-top text-center items-center">How about you shut up instead?</label>
+              <Image className='' src={evilCat} alt='Funny Cat looking with smug and evil expression' width={753} height={753} />
           </div>
-          <div className="fixed top-40 bottom-40 left-40 right-40 flex justify-center items-center z-50">
-            <div className='funny-cat' id="unimpressedCat">
-              <label className="z-60 text-6xl top-20 bottom-40 left-40 right-40 fixed justify-top text-center items-center">Well that's not very nice.</label>
-              <Image className='z-57' src={unimpressedCat} alt='Funny Cat looking with unimpressed expression' width={753} height={753} />
-            </div>
+          <div className="funny-cat fixed top-40 bottom-40 left-40 right-40 flex justify-center items-center" id="unimpressedCat">
+              <label className="text-6xl top-20 bottom-40 left-40 right-40 fixed justify-top text-center items-center">Well that's not very nice.</label>
+              <Image className='' src={unimpressedCat} alt='Funny Cat looking with unimpressed expression' width={753} height={753} />
           </div>
 
         </div>

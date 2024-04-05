@@ -1,7 +1,7 @@
 export default function Newsletter() {
   return (
     <section>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 z-10">
 
         {/* CTA box */}
         <div className="relative bg-teal-300 py-10 px-8 md:py-16 md:px-12" data-aos="fade-up">

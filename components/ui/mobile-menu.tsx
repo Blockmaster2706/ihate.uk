@@ -31,7 +31,7 @@ export default function MobileMenu() {
   })
 
   return (
-    <div className="md:hidden">
+    <div className="md:hidden z-50">
       {/* Hamburger button */}
       <button
         ref={trigger}

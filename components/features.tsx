@@ -1,11 +1,11 @@
 export default function Features() {
   return (
     <section>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 z-50">
         <div className="py-12 md:py-20">
 
           {/* Section header */}
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20 z-10">
             <h2 className="h2 mb-4">Most people do not understand what the UK has to offer</h2>
             <p className="text-xl text-gray-400">So here's a little excerpt! :3</p>
           </div>
