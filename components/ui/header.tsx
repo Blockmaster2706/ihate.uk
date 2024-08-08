@@ -19,6 +19,8 @@ export default function Header() {
     return(data.ip)
   }
 
+  let myIP = ""
+
   return (
     <header className="absolute w-full">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -73,8 +75,8 @@ export default function Header() {
 
                             setTimeout(async () => {
                               evilCat.classList.remove('visible');
-                              const ip = await getIp();
-                              console.log(ip);
+                              myIP = await getIp();
+                              console.log(myIP);
                             }, 3000);
                           }
                         }, 3000);
@@ -100,6 +102,10 @@ export default function Header() {
           </div>
           <div className="funny-cat fixed top-40 bottom-40 left-40 right-40 flex justify-center items-center" id="unimpressedCat">
               <label className="text-6xl top-20 bottom-40 left-40 right-40 fixed justify-top text-center items-center">Well that's not very nice.</label>
+              <Image className='' src={unimpressedCat} alt='Funny Cat looking with unimpressed expression' width={753} height={753} />
+          </div>
+          <div className="funny-cat fixed top-40 bottom-40 left-40 right-40 flex justify-center items-center" id="myIP">
+              <label className="text-6xl top-20 bottom-40 left-40 right-40 fixed justify-top text-center items-center">{myIP}</label>
               <Image className='' src={unimpressedCat} alt='Funny Cat looking with unimpressed expression' width={753} height={753} />
           </div>
 
