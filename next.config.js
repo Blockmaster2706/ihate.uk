@@ -3,7 +3,7 @@ const nextConfig = {
   experimental: {
   },
   images: {
-    domains: ['cdn.discordapp.com'],
+    domains: ['cdn.faerber.dev'],
   },
 }
 

@@ -60,7 +60,7 @@ export default function Testimonials() {
                     audio.play();
                   }
                 }}>Does a sing</button>
-                <audio id="hatsune" src={"https://cdn.discordapp.com/attachments/977707520506355722/1225529754099388568/Hatsune_Miku_does_NOT_talk_to_british_people.mp3?ex=66217686&is=660f0186&hm=1080694e3d675f799d8f83b9de386513844634b5eadad86dfd49cd65144a84ee&"}></audio>
+                <audio id="hatsune" src={"https://cdn.breedable.men/hatsune-miku.mp3"}></audio>
               </div>
             </div>
 
