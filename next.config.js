@@ -3,7 +3,12 @@ const nextConfig = {
   experimental: {
   },
   images: {
-    domains: ['cdn.faerber.dev'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.faerber.dev',
+      },
+    ],
   },
 }
 
